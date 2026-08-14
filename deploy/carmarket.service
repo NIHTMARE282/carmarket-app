@@ -1,0 +1,15 @@
+[Unit]
+Description=CarMarket FastAPI dealership
+After=network.target
+
+[Service]
+User=YOUR_LINUX_USER
+Group=YOUR_LINUX_USER
+WorkingDirectory=/var/www/carmarket
+EnvironmentFile=/var/www/carmarket/.env
+ExecStart=/var/www/carmarket/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

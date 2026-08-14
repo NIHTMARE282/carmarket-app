@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CarMarket | Premium Vehicle Marketplace</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head><body>
+<header class="topbar">
+  <a class="brand" href="/">CAR<span>MARKET</span></a>
+  <div class="search"><select id="categorySelect"><option>All</option><option>SUVs</option><option>Sedans</option><option>Trucks</option><option>Sports Cars</option><option>Luxury</option></select><input id="searchInput" placeholder="Search make, model or category"><button onclick="loadCars()">⌕</button></div>
+  <nav><a href="/">Inventory</a><a href="/contact">Support</a><a id="accountLink" href="/login">Sign In</a></nav>
+</header>
+<section class="hero">
+  <div><p class="eyebrow">CAR MARKETPLACE</p><h1>Find your next<br><span>great drive.</span></h1><p>Browse verified inventory and contact our support team for purchase assistance.</p><a class="btn primary" href="#inventory">Browse Inventory</a></div>
+</section>
+<main id="inventory" class="page">
+  <div class="section-head"><div><p class="eyebrow">LIVE INVENTORY</p><h2>Featured vehicles</h2></div><div class="filters"><button class="filter active" onclick="setCat('All',this)">All</button><button class="filter" onclick="setCat('SUVs',this)">SUVs</button><button class="filter" onclick="setCat('Sedans',this)">Sedans</button><button class="filter" onclick="setCat('Trucks',this)">Trucks</button><button class="filter" onclick="setCat('Sports Cars',this)">Sports</button></div></div>
+  <div id="cars" class="car-grid"><div class="loading">Loading inventory...</div></div>
+</main>
+<footer><strong>CAR<span>MARKET</span></strong><span>© 2026 CarMarket. All rights reserved.</span><a href="/contact">Contact Support</a></footer>
+<script src="/static/js/app.js"></script><script>document.addEventListener('DOMContentLoaded',()=>loadCars());</script>
+</body></html>
